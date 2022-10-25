@@ -1,0 +1,113 @@
+
+<div>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-text text">
+      CALCULADORA DE RESISTENCIAS
+    </span>
+  </nav>
+</div>
+<br><br>
+<div  class="container">
+  <div class="row">
+    <div class="col-sm">
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label>Banda 1</label>
+          <select name="banda1" class="form-control" [(ngModel)]="banda1">
+            <option selected>Selecciona el color</option>
+            <option value="0" class="ne">Negro</option>
+            <option value="10" class="ca">Café</option>
+            <option value="20" class="ro">Rojo</option>
+            <option value="30" class="na">Naranja</option>
+            <option value="40" class="am">Amarillo</option>
+            <option value="50" class="ve">Verde</option>
+            <option value="60" class="az">Azul</option>
+            <option value="70" class="vi">Violeta</option>
+            <option value="80" class="gr">Gris</option>
+            <option value="90" class="bl">Blanco</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>Banda 2</label>
+          <select name="banda2" class="form-control" [(ngModel)]="banda2">
+            <option selected>Selecciona el color</option>
+            <option value="0" class="ne">Negro</option>
+            <option value="1" class="ca">Café</option>
+            <option value="2" class="ro">Rojo</option>
+            <option value="3" class="na">Naranja</option>
+            <option value="4" class="am">Amarillo</option>
+            <option value="5" class="ve">Verde</option>
+            <option value="6" class="az">Azul</option>
+            <option value="7" class="vi">Violeta</option>
+            <option value="8" class="gr">Gris</option>
+            <option value="9" class="bl">Blanco</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>Banda 3</label>
+          <select name="banda3" class="form-control" [(ngModel)]="banda3">
+            <option selected>Selecciona el color</option>
+            <option value="1" class="ne">Negro</option>
+            <option value="10" class="ca">Café</option>
+            <option value="100" class="ro">Rojo</option>
+            <option value="1000" class="na">Naranja</option>
+            <option value="10000" class="am">Amarillo</option>
+            <option value="100000" class="ve">Verde</option>
+            <option value="1000000" class="az">Azul</option>
+            <option value="10000000" class="vi">Violeta</option>
+            <option value="100000000" class="gr">Gris</option>
+            <option value="1000000000" class="bl">Blanco</option>
+          </select>
+        </div>
+        <div class="col-sm-9">
+          <br>
+          <label for="">Tolerancia</label>
+          <hr>
+          <input type="radio" value="5%" name="tolerancia" [(ngModel)]="tolerancia"> Dorado
+          <hr>
+          <input type="radio" value="10%" name="tolerancia" [(ngModel)]="tolerancia"> Plata
+        </div>
+        <div class="col-sm-3">
+          <br><br><br><br><br>
+          <button class="btn btn-dark" type="button" (click)="porcentaje()">Calcular</button>
+        </div>
+      </div>
+      <br><br>
+      <div>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">B1</th>
+                <th scope="col">B2</th>
+                <th scope="col">B3</th>
+                <th scope="col">T</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Máximo</th>
+                <th scope="col">Mínimo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td [style.background-color]="color1">{{banda1}}</td>
+                <td [style.background-color]="color2">{{banda2}}</td>
+                <td [style.background-color]="color3">{{banda3}}</td>
+                <td [style.background-color]="color4">{{tolerancia}}</td>
+                <td>{{valor}}</td>
+                <td>{{max}}</td>
+                <td>{{min}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div> 
+    </div>
+    <!--
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="https://www.logicbus.com.mx/blog/wp-content/uploads/2019/07/codigo-colores-resistencias-e1563802288271.jpg" alt="Responsive image" >
+      </div>
+    </div>
+    -->
+  </div>
+
+</div>
